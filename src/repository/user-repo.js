@@ -50,6 +50,20 @@ class UserRepository{
         }
     }
 
+    async getByEmail(userEmail){
+        try{ 
+           const user=await User.findOne({
+                email:userEmail 
+           })
+           return user;
+        }
+        catch(error){
+            console.log("Something went wrong in repo layer")
+            throw error;
+        }
+    }
+
+
     async delete(userId){
         try{
            const user=await User.deleteOne({_id:userId})
