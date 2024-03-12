@@ -19,12 +19,12 @@ const productSchema=new mongoose.Schema({
         required:true
     },
     productPrice:{
-        type:Integer,
+        type:Number,
         required:true,
         default:0
     },
     productQuantity:{
-        type:Integer,
+        type:Number,
         required:true,
         default:0
     },

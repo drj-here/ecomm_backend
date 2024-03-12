@@ -7,7 +7,7 @@ const orderSchema=new mongoose.Schema({
         required:true
     },
     orderItems:[{
-        qty:{type:Integer,required:true},
+        qty:{type:Number,required:true},
         product:{
         type:mongoose.Schema.Types.ObjectId,
         ref:'Product',
@@ -38,19 +38,19 @@ const orderSchema=new mongoose.Schema({
         email_address:String 
     },
     itemsPrice:{
-        type:Integer,
+        type:Number,
         required:true
     },
     shippingPrice:{
-        type:Integer,
+        type:Number,
         required:true
     },
     taxPrice:{
-        type:Integer,
+        type:Number,
         required:true
     },
     totalPrice:{
-        type:Integer,
+        type:Number,
         required:true
     },
     isPaid:{
