@@ -1,4 +1,4 @@
-const ProductRepository=require('../repository/product')
+const ProductRepository=require('../repository/product-repo')
 
 class ProductService{
     constructor(){
