@@ -4,6 +4,7 @@ const UserController=require('../../controller/user-controller')
 const ProductController=require('../../controller/product-controller')
 const CategoryController=require('../../controller/category-controller')
 const CartController=require('../../controller/cart-controller')
+const WishlistController=require('../../controller/wishlist-controller')
 
 router.post('/user/signup',UserController.create)
 router.get('/user/get/:id',UserController.get)
@@ -27,5 +28,10 @@ router.post('/cart/create',CartController.create)
 router.get('/cart/get/:id',CartController.get)
 router.patch('/cart/update/:id',CartController.update)
 router.delete('/cart/delete/:id',CartController.destroy)
+
+router.post('/wishlist/create',WishlistController.create)
+router.get('/wishlist/get/:id',WishlistController.get)
+router.patch('/wishlist/update/:id',WishlistController.update)
+router.delete('/wishlist/delete/:id',WishlistController.destroy)
 
 module.exports=router 
